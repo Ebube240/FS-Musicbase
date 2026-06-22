@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Music Library System</h1>
+        <p>Manage Your Albums</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="artists.html">Artists</a>
+        <a href="albums.html">Albums</a>
+        <a href="songs.html">Songs</a>
+    </nav>
+    <main>
+        <h1>Albums</h1>
+        <div class="form-section">
+            <div class="form-group">
+                <input type="text" id="album_name" placeholder="Album Name">
+                <input type="number" id="release_year" placeholder="Release Year">
+                <input type="number" id="number_of_listens" placeholder="Number of Listens">
+                <input type="number" id="artist_id" placeholder="Artist ID">
+            </div>
+            <div class="form-group">
+                <button id="album-action-btn" onclick="createAlbum()">Create Album</button>
+                <button type="button" onclick="resetAlbumForm()">Cancel</button>
+            </div>
+        </div>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Album Name</th>
+                    <th>Release Year</th>
+                    <th>Listens</th>
+                    <th>Artist ID</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="albumTable"></tbody>
+        </table>
+    </main>
+</div>
+<script src="js/albums.js"></script>
+</body>
+</html>
